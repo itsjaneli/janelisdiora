@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы | Diora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">Diora</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="masters.html">Мастера</a></li>
+      <li><a href="booking.html">Записаться</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+    </ul>
+  </div>
+
+  <section class="reviews-section">
+    <h2>Отзывы наших клиентов</h2>
+    <div class="reviews-grid">
+
+      <!-- Отзыв с фото -->
+      <div class="review-card">
+        <img src="images/client1.jpg" alt="Клиентка 1">
+        <p class="review-text">“Очень уютный салон, мастера профессионалы! Маникюр держался почти 4 недели 😍”</p>
+        <h4>Алина К.</h4>
+      </div>
+
+      <!-- Отзыв без фото -->
+      <div class="review-card no-photo">
+        <p class="review-text">“Приятная атмосфера и качественное обслуживание. Обязательно вернусь снова!”</p>
+        <h4>Жанна</h4>
+      </div>
+
+      <!-- Отзыв с фото -->
+      <div class="review-card">
+        <img src="images/client2.jpg" alt="Клиентка 2">
+        <p class="review-text">“Сделали невероятный френч с дизайном! Спасибо мастеру Lana 💅”</p>
+        <h4>Мария В.</h4>
+      </div>
+
+      <!-- Отзыв без фото -->
+      <div class="review-card no-photo">
+        <p class="review-text">“Очень понравился сервис! Приятно удивлена, что в Астане есть такой уровень 🫶”</p>
+        <h4>Асель</h4>
+      </div>
+
+      <!-- Отзыв с фото -->
+      <div class="review-card">
+        <img src="images/client3.jpg" alt="Клиентка 3">
+        <p class="review-text">“SPA-маникюр просто сказка! Руки как у младенца стали!”</p>
+        <h4>Диана</h4>
+      </div>
+
+      <!-- Отзыв без фото -->
+      <div class="review-card no-photo">
+        <p class="review-text">“Лучший салон! Записалась по рекомендации и теперь только сюда ❤️”</p>
+        <h4>Салтанат</h4>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+
+<section class="leave-review">
+  <h2>Оставьте свой отзыв</h2>
+  <form class="review-form" id="reviewForm">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <textarea name="message" placeholder="Ваш отзыв" required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+  <div id="thankYouMessage" class="thank-you hidden">
+    Спасибо за ваш отзыв! 💖<br>Нам очень важно ваше мнение!
+  </div>
+</section>
+

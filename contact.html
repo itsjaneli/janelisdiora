@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | Diora</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fbeef3;
+      color: #333;
+      padding: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #d5a6bd;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2, .contact-section h3 {
+      text-align: center;
+      color: #d5a6bd;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .contact-icons a {
+      font-size: 24px;
+      color: #d5a6bd;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #d5a6bd;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #c58aa8;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Diora</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="masters.html">Мастера</a></li>
+      <li><a href="booking.html">Записаться</a></li>
+      <li><a href="contact.html" class="active">Контакты</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+    </ul>
+  </div>
+
+  <section class="contact-section">
+    <h2>Свяжитесь с нами</h2>
+
+    <div class="contact-info">
+      <p><strong>Наш адрес:</strong> г. Астана, ул. Динмухамеда Кунаева 12/2</p>
+      <p><strong>Мы в Instagram:</strong> <a href="https://www.instagram.com/its_janeli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">@diora_nail</a></p>
+      <p><strong>Наши контакты:</strong></p>
+      <div class="contact-icons">
+        <a href="https://www.instagram.com/its_janeli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/77001234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <h3>Как нас найти:</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5955.174385563636!2d71.42145778106834!3d51.129815041966616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424587a9d8a3ae27%3A0xfc02a9de053ca2db!2sRafe%20beauty%20lounge!5e0!3m2!1sru!2skz!4v1749911180352!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h3>Оставьте сообщение</h3>
+    <form>
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Ваш Email" required>
+      <textarea placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+</body>
+</html>

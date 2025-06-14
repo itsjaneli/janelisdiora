@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Услуги | Diora</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fff0f5, #fbeaf0);
+      font-family: 'Georgia', serif;
+      color: #333;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+    }
+    .service-section {
+      padding: 40px;
+    }
+    .service-category {
+      margin-bottom: 40px;
+    }
+    .service-category h2 {
+      font-size: 24px;
+      color: #c0789b;
+      border-bottom: 2px solid #eecde2;
+      padding-bottom: 10px;
+    }
+    .service-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .service-list button {
+      background-color: #fff;
+      border: 1px solid #e2c7d5;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      color: #c0789b;
+      transition: background 0.3s;
+    }
+    .service-list button:hover {
+      background-color: #f9e2ec;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+    .modal-content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .modal-content .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Diora</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="masters.html">Мастера</a></li>
+      <li><a href="booking.html">Запись</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+    </ul>
+  </div>
+
+  <section class="service-section">
+    <div class="service-category">
+      <h2>Маникюр</h2>
+      <div class="service-list">
+        <button onclick="openModal('Классический маникюр', 'images/classic.jpg', 'Обрезной маникюр с уходом. Цена: 3000 ₸')">Классический</button>
+        <button onclick="openModal('Европейский маникюр', 'images/europe.jpg', 'Безобрезной, мягкий маникюр. Цена: 3500 ₸')">Европейский</button>
+        <button onclick="openModal('Аппаратный маникюр', 'images/uslugi/apparat.jpg', 'Фрезеровка и шлифовка. Цена: 4000 ₸')">Аппаратный</button>
+        <button onclick="openModal('Комбинированный маникюр', 'images/uslugi/combi.jpg', 'Сочетание техник. Цена: 4500 ₸')">Комбинированный</button>
+        <button onclick="openModal('SPA-маникюр', 'images/uslugi/spa.jpg', 'Скраб, маска и массаж. Цена: 5000 ₸')">SPA-маникюр</button>
+        <button onclick="openModal('Японский маникюр', 'images/uslugi/japan.jpg', 'Полировка пастой и пудрой. Цена: 5500 ₸')">Японский</button>
+      </div>
+    </div>
+
+    <div class="service-category">
+      <h2>Педикюр</h2>
+      <div class="service-list">
+        <button onclick="openModal('Классический педикюр', 'images/pedicureclassic.jpg', 'Уход за стопами. Цена: 5000 ₸')">Классический</button>
+        <button onclick="openModal('SPA-педикюр', 'images/pedicurespa.jpg', 'Расслабляющие процедуры. Цена: 6000 ₸')">SPA-педикюр</button>
+        <button onclick="openModal('Аппаратный педикюр', 'images/pedicureapparat.jpg', 'Удаление натоптышей. Цена: 5500 ₸')">Аппаратный</button>
+        <button onclick="openModal('Комбинированный педикюр', 'images/uslugi/pedicure_combi.jpg', 'Комбинированная техника. Цена: 6500 ₸')">Комбинированный</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <img id="modalImage" src="" alt="">
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(title, imageSrc, text) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalImage').src = imageSrc;
+      document.getElementById('modalText').innerText = text;
+      document.getElementById('modal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
